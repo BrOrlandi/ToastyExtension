@@ -1,0 +1,25 @@
+{
+  "name": "MK Toasty",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Shows a 'Toasty!' when you types 'toasty'.",
+  "permissions": [
+    "activeTab"
+  ],
+  "author": "Bruno Orlandi",
+  "icons": {
+    "48" : "icon-48.png",
+    "128" : "icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js" : ["jquery-2.1.0.min.js","jquery.toasty.min.js", "contentscript.js"],
+      "css" : ["toasty.min.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    "toasty.mp3",
+    "toasty.png"
+  ]
+}
